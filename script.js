@@ -1,14 +1,14 @@
 //your JS code here. If required.
 function myFunc() {
-	let name = documnet.getElementById("name");
-	let age = Number(document.getELementById("age").value);
+	let name = document.getElementById("name").value;
+	let age = document.getElementById("age").value;
 	if(name === "" || age === ""){
 		alert("Please enter valid details.");
 		return;
 	}
 	let result = new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			if(age > 18){
+			if(Number(age) > 18){
 				resolve()
 			}else{
 				reject()
